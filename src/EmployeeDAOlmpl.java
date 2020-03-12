@@ -9,9 +9,9 @@ public static Connection conn = null;
 //
 public static final  String GET_ALL_EMP = "select * from Employee";
 public static final String ADD_NEW_EMP = "insert into Employee"+"(empID,name,position,salary) values (?,?,?,?,)";
-private static final String FIND_EMP_BY_ID = "select * from Employee where empID =?";
-public static final String UPDATE_EMP = "update Employee"+"set name = ?,position = ?, salary =? where empid =?";
-public static final String DELETE_EMP ="delete from Employee"+"where empID =?";
+private static final String FIND_EMP_BY_ID = "select * from Employee where empID = ?";
+public static final String UPDATE_EMP = "update Employee"+"set name = ?,position = ?, salary = ? where empid = ?";
+public static final String DELETE_EMP ="delete from Employee"+"where empID = ?";
 
    //
     private static EmployeeDAOlmpl instance = new EmployeeDAOlmpl();
@@ -128,7 +128,7 @@ ps.setInt(4,emp.getEmpID());
 
 int rs =ps.executeUpdate();
 if (rs !=0) {
-    System.out.println("Emplyee with id " + emp.getEmpID() + "was updated.");
+    System.out.println("Employee with id " + emp.getEmpID() + "was updated.");
 
 }else{
     System.out.println("Could not update employee with id "+emp.getEmpID());
