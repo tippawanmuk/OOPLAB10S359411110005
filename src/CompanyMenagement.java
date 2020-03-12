@@ -72,6 +72,9 @@ dao.updateEmp(emp);
         List<Empioyee> emp = dao.getAllEmp();
         for (Empioyee e:emp){
             System.out.println(e.toString());
+
+
+
         }
     }
 }
